@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Yutawir Technologies Design System
+   Primary: Ember Orange (#FF8A00) from brand logo
+   Accent: Green (#22C55E) for success and growth
+   All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Brand Colors */
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 249 10% 98%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 33 100% 50%;         /* #FF8A00 - Ember Orange */
+    --primary-foreground: 222 47% 7%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+
+    --accent: 142 76% 36%;          /* #22C55E - Green 500 */
+    --accent-foreground: 0 0% 98%;
+
+    --success: 142 76% 36%;         /* Green for success states */
+    --success-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 33 100% 50%;            /* Orange ring for focus states */
+
+    --radius: 1rem;
+
+    /* Orange/Amber gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(33, 100%, 50%) 0%, hsl(38, 92%, 50%) 50%, hsl(45, 93%, 58%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(222, 47%, 11%) 0%, hsl(33, 100%, 50%) 50%, hsl(45, 93%, 58%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0, 0%, 100%) 0%, hsl(249, 10%, 98%) 100%);
+
+    /* Warm shadows */
+    --shadow-soft: 0 2px 10px -2px hsl(33 100% 50% / 0.15);
+    --shadow-medium: 0 4px 20px -4px hsl(33 100% 50% / 0.20);
+    --shadow-strong: 0 8px 30px -8px hsl(33 100% 50% / 0.25);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark theme for Yutawir Technologies */
+    --background: 222 47% 7%;        /* #0B0F1A */
+    --foreground: 220 13% 91%;
+
+    --card: 222 47% 11%;             /* #111827 */
+    --card-foreground: 220 13% 91%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 220 13% 91%;
+
+    --primary: 33 100% 50%;          /* Keep orange primary consistent */
+    --primary-foreground: 222 47% 7%;
+
+    --secondary: 220 13% 18%;
+    --secondary-foreground: 220 13% 91%;
+
+    --muted: 220 13% 15%;
+    --muted-foreground: 220 9% 65%;
+
+    --accent: 142 76% 36%;           /* Keep green accent consistent */
+    --accent-foreground: 222 47% 7%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 222 47% 7%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 220 13% 91%;
+
+    --border: 222 47% 20%;           /* #293241 */
+    --input: 222 47% 20%;
+    --ring: 33 100% 50%;             /* Orange ring for dark mode */
+
+    /* Dark orange/amber gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(33, 100%, 50%) 0%, hsl(45, 93%, 58%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(222, 47%, 7%) 0%, hsl(222, 47%, 11%) 50%, hsl(33, 100%, 50%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(220, 13%, 15%) 0%, hsl(222, 47%, 11%) 100%);
+
+    /* Dark warm shadows */
+    --shadow-soft: 0 2px 10px -2px hsl(0 0% 0% / 0.3);
+    --shadow-medium: 0 4px 20px -4px hsl(0 0% 0% / 0.4);
+    --shadow-strong: 0 8px 30px -8px hsl(0 0% 0% / 0.5);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .btn-hero {
+    @apply bg-gradient-primary text-primary-foreground hover:shadow-medium transition-all duration-300;
+  }
+
+  .btn-outline-hero {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300;
+  }
+
+  .card-hover {
+    @apply hover:shadow-medium hover:-translate-y-1 transition-all duration-300;
+  }
+
+  .tech-grid-bg {
+    background-image: 
+      linear-gradient(rgba(255, 138, 0, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 138, 0, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+}

@@ -1,73 +1,124 @@
-# Welcome to your Lovable project
+# Yutawir Technologies Website
 
-## Project info
+## Overview
 
-**URL**: https://lovable.dev/projects/71089d05-9c5c-4262-8b24-df46419224de
+This is a modern, production-ready marketing website for **Yutawir Technologies**, a Dubai-based software company specializing in building custom software solutions for startups, SMBs, and enterprises. The website focuses on their key services in AI/computer vision, cybersecurity, and algorithmic trading (fintech).
 
-## How can I edit this code?
+The design incorporates **Yutawir’s branding** with an **orange and amber color theme**, creating a sleek, professional look for the site. The site is built using **Next.js** with **React** and **Tailwind CSS** for styling.
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## Key Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/71089d05-9c5c-4262-8b24-df46419224de) and start prompting.
+- **Brand Positioning**: The website represents **Yutawir Technologies** and its core values: **Secure, Intelligent, Scalable**.
+- **Tech Stack**:
+  - **Framework**: Next.js + React
+  - **Styling**: Tailwind CSS
+  - **Component Library**: Shadcn/ui (for UI components)
+  - **Icons**: Lucide-react (for icons)
+  - **Animations**: Framer-motion (for smooth animations)
+  
+- **Color Palette**:
+  - Primary: `#FF8A00` (Ember Orange) and gradients
+  - Secondary: `#F59E0B` (Amber)
+  - Success: `#22C55E` (Green)
+  - Neutral: Soft neutrals like `#FFFFFF` (light) and `#0B0F1A` (dark)
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Typography**:
+  - **Headings**: Sora or Plus Jakarta Sans (600–700 weight)
+  - **Body**: Inter (400–500 weight)
 
-**Use your preferred IDE**
+- **Responsiveness**: Fully responsive design with breakpoints for mobile (sm), tablet (md), and desktop (lg).
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Pages
 
-Follow these steps:
+### 1. **Navigation (Sitewide)**
+- **Left**: Yutawir logo
+- **Right**: About, Services, Solutions, Case Studies, Contact
+- **CTA Button**: **Book a Discovery Call**
+- **Mobile Navigation**: Sheet/Drawer with links
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### 2. **Home**
+- **Hero Section**: Headline **Build secure, intelligent, and scalable software—faster** with a background gradient of orange and amber hues.
+- **Trust Strip**: Display small grayscale logos (placeholders).
+- **Services Overview**: 3 cards with service details:
+  - **Computer & Machine Vision**
+  - **Cybersecurity**
+  - **Algorithmic Trading (Stock & Crypto)**
+- **Solutions/Use-Cases**: Accordion or Tabs listing industries like Manufacturing QA, Retail Analytics, Threat Monitoring.
+- **Process**: 4 Steps: Discover → Design → Build → Secure & Scale
+- **CTA**: Gradient card **Get a Proposal**
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### 3. **About**
+- **Story**: Company values (Reliability, Security, Velocity, Impact)
+- **Mission & Vision**: Block with amber borders
+- **Leadership**: Cards with short bios
+- **CTA**: **Let’s Talk**
 
-# Step 3: Install the necessary dependencies.
-npm i
+### 4. **Services**
+- **Intro**: Short value proposition
+- **Detailed Service Pages**:
+  - **Computer & Machine Vision** (AI & computer vision technologies)
+  - **Cybersecurity** (Appsec, IAM, Cloud Hardening)
+  - **Algorithmic Trading** (Low-latency, Strategy Design, Backtesting)
+- **Features/Badges** for each service, mini case highlights, and CTA
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+### 5. **Solutions / Case Studies**
+- **Grid of Cards**: Display short value outcomes like “Reduced manual QA by 72%”.
+- **Dialog/Sheet** with problem → approach → outcome metrics
+- **CTA**: **Request Full Case Study PDF**
 
-**Edit a file directly in GitHub**
+### 6. **Contact**
+- **Layout**: Left text, Right form (Shadcn Form)
+- **Form Fields**: Name, Work Email, Company, Phone, Message
+- **Info**: Dubai, UAE, MapPin, Phone number
+- **Secondary CTA**: **Book a Discovery Call**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## Components & UI Elements
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- **Buttons**:
+  - **Primary**: Orange→Amber gradient (`from-#FF8A00 via-#F59E0B to-#FBBF24`), hover darken (`brightness-95`).
+  - **Secondary**: Outline with amber border/text; hover `bg-amber-50/10`.
+  - **Ghost**: Neutral text; hover underline with amber decoration.
+  - All buttons: rounded-2xl, subtle lift on hover.
 
-## What technologies are used for this project?
+- **Cards**: Soft borders, shadow, hover: `translate-y-[1px]`, `shadow-md`.
 
-This project is built with:
+- **Sections**: 80-100px vertical spacing on desktop, 48-64px on mobile.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- **Hero & CTA Bands**: Gradient backgrounds with icons (lucide-react).
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/71089d05-9c5c-4262-8b24-df46419224de) and click on Share -> Publish.
+## Performance
 
-## Can I connect a custom domain to my Lovable project?
+- **Optimization**: Lazy loading of images, prefetch critical routes, no layout shifts.
+- **Code Split & Minification**: Tree-shaking and code-splitting.
+- **Accessibility**: Ensure WCAG AA contrast minimums, keyboard navigability with visible focus rings (`ring-amber-400`), and clear hit targets for interactive elements.
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## SEO & Analytics
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- **SEO**: Each page has its own `<title>` and meta description, OG/Twitter meta, and JSON-LD structured data.
+- **Analytics**: Integration for Google Analytics (GA4) or Plausible, no personally identifiable information (PII) tracked.
+
+---
+
+## Setup Instructions
+
+### Prerequisites:
+1. Node.js (version >= 16)
+2. Tailwind CSS setup
+3. Shadcn/UI and Lucide-react libraries installed
+
+### Steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Yutawir/yutawir-website.git
+   cd yutawir-website

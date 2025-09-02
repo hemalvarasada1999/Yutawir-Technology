@@ -107,18 +107,3 @@ The design incorporates **Yutawir’s branding** with an **orange and amber colo
 - **SEO**: Each page has its own `<title>` and meta description, OG/Twitter meta, and JSON-LD structured data.
 - **Analytics**: Integration for Google Analytics (GA4) or Plausible, no personally identifiable information (PII) tracked.
 
----
-
-## Setup Instructions
-
-### Prerequisites:
-1. Node.js (version >= 16)
-2. Tailwind CSS setup
-3. Shadcn/UI and Lucide-react libraries installed
-
-### Steps:
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Yutawir/yutawir-website.git
-   cd yutawir-website
